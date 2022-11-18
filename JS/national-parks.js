@@ -1,28 +1,33 @@
+// importing js downloaded scripts
 import { parkTypesArray } from "../scripts/parkTypeData.js";
 import { locationsArray } from "../scripts/locationData.js";
 import { nationalParksArray } from "../scripts/nationalParkData.js";
+// console log to ensure it shows
 console.log(parkTypesArray, locationsArray, nationalParksArray);
 
+// creating a variable for length of the arrays
 let locationArrayLength = locationsArray.length;
 let parkTypesArrayLength = parkTypesArray.length;
 
+//creating loop to show new options from location array
 for (let i = 0; i < locationArrayLength; i++) {
     let newOption = new Option(locationsArray[i], locationsArray[i]);
     let locationDropDown = document.getElementById('locationDrop');
-    // look up reasoning for ',undefined'
-    locationDropDown.add(newOption, undefined);
+    locationDropDown.add(newOption);
 }
 
+//creating loop to show new options from parkTypes array
 for (let i = 0; i < parkTypesArrayLength; i++) {
     let newOption = new Option(parkTypesArray[i], parkTypesArray[i]);
     let parkDropDown = document.getElementById('parkTypeDrop');
-    // look up reasoning for ',undefined'
-    parkDropDown.add(newOption, undefined);
+    parkDropDown.add(newOption);
 }
 
+// button was clicked after option was selected
 let searchButton = document.getElementById('searchBtn');
 searchButton.addEventListener('click', selectedOption);
 
+//create a function for pop up alert if blank
 function selectedOption() {
 
     let locationData = document.getElementById('locationDrop').value;
@@ -69,6 +74,7 @@ function showSelectedOption(filterData) {
         let textBox = document.createElement('div');
         mainSection.appendChild(textBox);
         let textOne = document.createElement('h3');
+        textOne.setAttribute('id', 'textOne')
         textOne.innerHTML = 'Not found!';
         textBox.appendChild(textOne);
     } else {
@@ -79,6 +85,7 @@ function showSelectedOption(filterData) {
             let mainTextBox = document.createElement('div');
             mainSection.appendChild(mainTextBox);
             let displayTitle = document.createElement('p');
+            displayTitle.setAttribute('id', 'showTitle')
             displayTitle.innerHTML = title;
             mainTextBox.appendChild(displayTitle);
             let displayPhoneNumer = document.createElement('p');

@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Park Searh</title>
+    <style>
+        /* body {
+            background-image: url(/images/mountain.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.5; */
+        /* } */
+    </style>
+
+    <link rel="stylesheet" href="/park.css">
 </head>
+
 <body>
 
-        <!-- Create Nav Bar -->
-    <!-- This is for the link -->
-<nav class="navbar bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="HTML/mountain.html">Mountain Locator</a>
-      <a class="navbar-brand" href="HTML/parks.html">National Park Locator</a>
-    </div>
-  </nav>
-  
-  <!-- This is for the heading -->
-  <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
-    </div>
-  </nav>
+    <!-- Create Nav Bar -->
+    <nav style="font-size: large;" class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Home Page</a>
+            <a class="navbar-brand" href="../HTML/mountain.html">Mountain Information</a>
+            <a class="navbar-brand" href="../HTML/parks.html">National Park Locator</a>
+        </div>
 
-    <select name="location/state" id="locationDrop">
-        <option value="blank">Any Location</option>
-    </select>
-    <select name="parkType" id="parkTypeDrop">
-        <option value="blank">Any Park</option>
-    </select>
+        <select name="location/state" id="locationDrop">
+            <option value="blank">Any Location</option>
+        </select>
+        <select name="parkType" id="parkTypeDrop">
+            <option value="blank">Any Park</option>
+        </select>
 
-    <button id="searchBtn">Search</button>
+        <button id="searchBtn">Search</button>
 
-    <main>
+        <main id="mainTag"></main>
 
-    </main>
+        <!-- <section class="row">
+        <div class="col"> 
+            <img src="../images/NationalParkImg.png" alt="NationParkImg">
+        </div> -->
 
 
-    <script src="../JS/national-parks.js" type="module"></script>
+        <script src="../JS/national-parks.js" type="module"></script>
 </body>
+
 </html>
