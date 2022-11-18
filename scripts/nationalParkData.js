@@ -1,4 +1,4 @@
-const nationalParksArray = [
+export const nationalParksArray = [
     {
     LocationID: "ABLI",
     LocationName: "Abraham Lincoln Birthplace National Historical Park",
@@ -6860,17 +6860,17 @@ const nationalParksArray = [
 ]
 
 
-nationalParksArray.sort(function(a,b){
-    if (a.LocationID >b.LocationID) return -1;
-    else if (a.LocationID ==b.LocationID) return 0;
-    else return 1;
-});
+// nationalParksArray.sort(function(a,b){
+//     if (a.LocationID >b.LocationID) return -1;
+//     else if (a.LocationID ==b.LocationID) return 0;
+//     else return 1;
+// });
 
 
-let parksArray = nationalParksArray.length;
-for (let i = 0; i < parksArray; i++) {
-    console.log(nationalParksArray[i].LocationID);
-}
+// let parksArray = nationalParksArray.length;
+// for (let i = 0; i < parksArray; i++) {
+//     console.log(nationalParksArray[i].LocationID);
+// }
 
 
 
